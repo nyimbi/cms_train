@@ -21,9 +21,9 @@ from sqlalchemy.dialects.postgresql import aggregate_order_by
 from flask_validator import Validator
 
 from sqlalchemy import (Column, Integer, String, ForeignKey,
-    Sequence, Float, Text, BigInteger, Date,
-    DateTime, Time, Boolean, Index, CheckConstraint,
-    UniqueConstraint,ForeignKeyConstraint, Numeric, LargeBinary , Table)
+	Sequence, Float, Text, BigInteger, Date,
+	DateTime, Time, Boolean, Index, CheckConstraint,
+	UniqueConstraint,ForeignKeyConstraint, Numeric, LargeBinary , Table)
 from datetime import timedelta, datetime, date
 from sqlalchemy.dialects.postgresql import *
 from sqlalchemy_mixins import AllFeaturesMixin
@@ -31,11 +31,11 @@ from sqlalchemy.sql import func
 from .mixins import *
 # How to do validations in a model
 
-        #@classmethod
-        #def __declare_last__(cls):
-            #ValidateString(User.name)
-            #ValidateInteger(User.code)
-            #ValidateEmail(User.email, true, true, The e-mail is not valid. Please check it)
+		#@classmethod
+		#def __declare_last__(cls):
+			#ValidateString(User.name)
+			#ValidateInteger(User.code)
+			#ValidateEmail(User.email, true, true, The e-mail is not valid. Please check it)
 
 # Here is how to extend the User model
 #class UserExtended(Model, UserExtensionMixin):

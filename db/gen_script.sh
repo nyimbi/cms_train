@@ -41,14 +41,14 @@ ACTS=("Visit" "Discipline" "Medevent" "Hearing" "Prisoncommital" "Case")
 
 ## Basic Setup
 # Out Temporary Working Database
-dropdb gtmp;
-createdb gtmp;
-python $1;
+#dropdb gtmp;
+#createdb gtmp;
+#python $1;
+# We did this manually by creating the database
 
 
 
-
-flask-sqlacodegen postgresql://nyimbi:abcd1234@localhost/gtmp --flask --outfile kmodel.py;
+flask-sqlacodegen postgresql://shared:abcd4321@localhost/ctmp --flask --outfile kmodel.py;
 awk '/^class/' kmodel.py > c1.txt
 cut -d ' ' -f2 c1.txt > c2.txt
 cut -d '(' -f1 c2.txt > kclass_tables.txt
@@ -91,6 +91,7 @@ echo " " >> kview.py
 echo "#To pretty Print from PersonMixin " >> kview.py
 echo "def pretty_month_year(value):" >> kview.py
 echo "    return calendar.month_name[value.month] + ' ' + str(value.year)" >> kview.py
+# All I am doing here is outputting strings#noted
 echo " " >> kview.py
 echo " " >> kview.py
 echo "def pretty_year(value):" >> kview.py
@@ -374,14 +375,9 @@ echo -e "#class UserExtended(Model, UserExtensionMixin):\n$(cat kmodel.py)" > km
 
 echo -e "# Here is how to extend the User model\n$(cat kmodel.py)" > kmodel.py
 echo -e "\n$(cat kmodel.py)" > kmodel.py
-@classmethod
-  def __declare_last__(cls):
-      ValidateString(User.name)
-      ValidateInteger(User.code)
-      ValidateEmail(User.email, true, true, "The e-mail is not valid. Please check it")
 
 
-echo -e "\n$(cat kmodel.py)" > kmodel.py
+#echo -e "\n$(cat kmodel.py)" > kmodel.py
 echo -e "\t\t\t#ValidateEmail(User.email, true, true, "The e-mail is not valid. Please check it")\n$(cat kmodel.py)" > kmodel.py
 echo -e "\t\t\t#ValidateInteger(User.code)\n$(cat kmodel.py)" > kmodel.py
 echo -e "\t\t\t#ValidateString(User.name)\n$(cat kmodel.py)" > kmodel.py
