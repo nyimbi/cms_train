@@ -1,3 +1,27 @@
+Case Management System Training Prototype
+-----------------------------------
+
+### To run on your machine:
+1). git clone https://github.com/nyimbi/cms_train.git
+cd cms_train
+
+Create a database on your system called cms
+2). createdb cms
+
+3). Change th config.py file to reflect your username and password
+SQLALCHEMY_DATABASE_URI = 'postgresql://username:password@localhost/cms’
+
+4). fabmanager create-db
+5). fabmanager create-admin
+6). fabamanager run
+
+
+### How we built this ####
+https://editor.ponyorm.com/user/nyimbi/cmgmt_ke1/designer
+
+Thats the link to the data model design.
+
+
 Any statement that starts with a $ indicates things we types at the command prompt. Do not type the "$" :-)
 
 
