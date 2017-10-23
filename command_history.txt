@@ -1,0 +1,216 @@
+    1  screen -ls
+    2  screen -d -m -S shared_screen
+    3  screen -ls
+    4  exit
+    5  screen -x 10769.shared_screen
+    6  pwd
+    7  screen -ls
+    8  screen -x 10769.shared_screen
+    9  exit
+   10  screen -x 10769.shared_screen
+   11  screen -x 10769.shared_screen
+   12  .
+   13  screen -x 10769.shared_screen
+   14  .
+   15  screen -x 10769.shared_screen
+   16  ls
+   17  screen -x 10769.shared_screen
+   18  screen -x 10769.shared_screen
+   19  .
+   20  screen -x 10769.shared_screen
+   21  #skype
+   22  # I had to close the last terminal. Use the new link above
+   23  # https://eu.teleconsole.com/s/5d996eff14b0e8899e2f2176d88433b79965c2ee
+   24  # y is a linux command!!!! Please preface everything you type with a ##############
+   25  # like this
+   26  # are we all on now?
+   27  # Please type "agree"
+   28  pwd
+   29  ls
+   30  mkdir train
+   31  cd train
+   32  fabmanager create-app
+   33  ls
+   34  # I have just created a new app called cms
+   35  #3
+   36  ps aux | grep teleconsole
+   37  ls
+   38  cd cms
+   39  ls
+   40  vim README.rst 
+   41  ls
+   42  #following
+   43  pip install flask-sqlacodegen
+   44  which pip
+   45  pip install flask-appbuilder flask-sqlacodegen humanize flask-humanize sqlalchemy-utils sqlalchmey-continuum 
+   46  pip install flask-appbuilder flask-sqlacodegen humanize flask-humanize sqlalchemy-utils sqlalchemy-continuum psycopg2 
+   47  # Here is the command I ran to setup everything
+   48  # pip install flask-appbuilder flask-sqlacodegen humanize flask-humanize sqlalchemy-utils sqlalchemy-continuum psycopg2 
+   49  # Copy it to a scratch file - you will need to use it periodically
+   50  # Please type a # if you are following
+   51  ls
+   52  vim run.py
+   53  cat run.py 
+   54  apt search ccat
+   55  sudo apt-get install python-pygments
+   56  pygmentize -g run.py 
+   57  # I just install python-pygmentize so that I can "cat" things with color
+   58  ls
+   59  tree
+   60  # babel is the translation package - each .pot file is a new language
+   61  cat babel/messages.pot 
+   62  # we will come to that later
+   63  tree
+   64  # The most important work is done in the /app directory
+   65  # in order to run any fabmanager commands you have to be in the top of your app directory
+   66  pwd
+   67  ls
+   68  # #Lo
+   69  # Am I typing too fast?
+   70  #yes
+   71  # Ok I will slow down
+   72  pwd
+   73  tree
+   74  mkdir doc
+   75  mkdir db
+   76  tree
+   77  # Created two new directories doc and db
+   78  #noted
+   79  cd db
+   80  ls
+   81  pwd
+   82  ls
+   83  # I have copied these files from my computer
+   84  pygmentize -g gen_script2.sh | less
+   85  cat gen_script2.sh 
+   86  cat gen_script2.sh | less
+   87  ls
+   88  diff gen_script.sh gen_script2.sh 
+   89  pwd
+   90  # to copy them to your machine do this
+   91  pwd
+   92  scp shared@88.80.188.224:/home/shared/train/cms/db/* .
+   93  # scp shared@88.80.188.224:/home/shared/train/cms/db/* .
+   94  # you can then copy the files to your machine
+   95  # enter the password abcd4321
+   96  #33
+   97  Ok
+   98  #ok will create a github repo now
+   99  cdubhhub ..
+  100  ls
+  101  cd huh..
+  102  cd ..
+  103  ls
+  104  git init
+  105  ls
+  106  git remote add origin https://github.com/nyimbi/cms_train.git
+  107  git push -u origin master
+  108  git status
+  109  # The .gitignore contains specifications of files I dont want managed by git
+  110  vim .gitignore 
+  111  ls
+  112  git add .
+  113  git status
+  114  git commit -m "Initial commit of CMS, nothing done yet"
+  115  git push
+  116  git push -u origin master
+  117  pwd
+  118  # https://github.com/nyimbi/cms_train
+  119  vim training_notes.txt
+  120  history
+  121  vim training_notes.txt
+  122  ls
+  123  tree
+  124  git status
+  125  # I am now going to get the schema from ponyorm
+  126  # Are there any comments on the schema??
+  127  cd db
+  128  ls
+  129  psql
+  130  pwd
+  131  cd .
+  132  cd ..
+  133  ls
+  134  vim training_notes.txt 
+  135  git status
+  136  git add .
+  137  git status
+  138  git commit -m "Started writing training notes"
+  139  git push
+  140  # note how I can now just say "git push"
+  141  ls
+  142  cd db
+  143  vim s1.sql
+  144  ls
+  145  vim s1.sql
+  146  pwd
+  147  ls
+  148  # copied s1.sql from my computer here
+  149  createdb ctmp
+  150  psql -d ctmp
+  151  # I have now created all the tables in ctmp
+  152  ls
+  153  vim gen_script.sh 
+  154  ls
+  155  ./gen_script.sh 
+  156  ls
+  157  cat kmodel.py 
+  158  # so it is not connecting to the database
+  159  vim gen_script.sh 
+  160  ./gen_script.sh 
+  161  vim gen_script.sh 
+  162  ls
+  163  vim gen_script2.sh 
+  164  vim gen_script.sh 
+  165  ./gen_script.sh 
+  166  ls
+  167  vim kmodel.py 
+  168  git status
+  169  git add .
+  170  cd ..
+  171  git sttus
+  172  git status
+  173  git add .
+  174  git commit -m "first generation, edited gen_script"
+  175  git push
+  176  git status
+  177  ls
+  178  cd app
+  179  ls
+  180  vim models.py 
+  181  cd ..
+  182  ls
+  183  vim training_notes.txt 
+  184  # Are you following so far? anything I need to explain?
+  185  # Send me an email for a further explanation
+  186  # (If you need one)
+  187  cd app
+  188  ls
+  189  pwd
+  190  ls
+  191  vim models.py
+  192  cd ..
+  193  vim training_notes.txt 
+  194  ls
+  195  psql
+  196  ls
+  197  # the application confirguration is in config.py
+  198  vim config.py 
+  199  # we changed the app database name to cms
+  200  vim config.py 
+  201  # So let us create the database
+  202  pip install calendar
+  203  fabmanager create-db
+  204  vim config.py
+  205  fabmanager create-db
+  206  createdb cms
+  207  vim training_notes.txt 
+  208  fabmanager create-db
+  209  pip install sqlalchemy_searchable
+  210  fabmanager create-db
+  211  pip install sqlalchemy_mixins
+  212  fabmanager create-db
+  213  pip install arrow
+  214  fabmanager create-db
+  215  ls
+  216  history >command_history.txt

@@ -9,6 +9,7 @@ SECRET_KEY = '\2\1thisismyscretkey\1\2\e\y\y\h'
 SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'app.db')
 #SQLALCHEMY_DATABASE_URI = 'mysql://myapp@localhost/myapp'
 #SQLALCHEMY_DATABASE_URI = 'postgresql://root:password@localhost/myapp'
+SQLALCHEMY_DATABASE_URI = 'postgresql://shared:abcd4321@localhost/cms'
 
 # Flask-WTF flag for CSRF
 CSRF_ENABLED = True
@@ -17,7 +18,7 @@ CSRF_ENABLED = True
 # GLOBALS FOR APP Builder 
 #------------------------------
 # Uncomment to setup Your App name
-#APP_NAME = "My App Name"
+#APP_NAME = "Case Management(Demo)"
 
 # Uncomment to setup Setup an App icon
 #APP_ICON = "static/img/logo.jpg"
@@ -62,8 +63,8 @@ BABEL_DEFAULT_LOCALE = 'en'
 BABEL_DEFAULT_FOLDER = 'translations'
 # The allowed translation for you app
 LANGUAGES = {
-    'en': {'flag':'gb', 'name':'English'},
-    'pt': {'flag':'pt', 'name':'Portuguese'},
+    'en': {'flag':'ke', 'name':'English'},
+    'sw': {'flag':'ke', 'name':'Swahili'},
     'pt_BR': {'flag':'br', 'name': 'Pt Brazil'},
     'es': {'flag':'es', 'name':'Spanish'},
     'de': {'flag':'de', 'name':'German'},
