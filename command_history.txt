@@ -214,3 +214,10 @@
   214  fabmanager create-db
   215  ls
   216  history >command_history.txt
+  217  git status
+  218  git add .
+  219  git commit -m "generated application database"
+  220  git push
+  223  # There were a few packages missing so added them
+  224  # sqlalchemy_mixins, sqlalchemy_searchable, arrow
+  225  history >command_history.txt
