@@ -221,3 +221,5 @@
   223  # There were a few packages missing so added them
   224  # sqlalchemy_mixins, sqlalchemy_searchable, arrow
   225  history >command_history.txt
+
+add 
